@@ -6,7 +6,7 @@
 /*   by: acontass <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                 +#+#+#+#+#+   +#+           */
 /*   Created: 2014/05/03 22:07:55 by acontass           #+#    #+#             */
-/*   Updated: 2014/05/05 00:54:58 by acontass          ###   ########.fr       */
+/*   Updated: 2014/05/18 13:04:58 by acontass          ###   ########.fr       */
 /*                                                                             */
 /* *************************************************************************** */
 #include "c_create.h"
@@ -178,5 +178,7 @@ int		main(int ac, char **av)
 		if (!(create_dirs_n_files(av)))
 			return (0);
 	}
+	else
+		write(2, "Usage: ./c_create project1 project2 ...\n", 40);
 	return (0);
 }
